@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fly Bird</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background-color: #000;
+  font-family: "Press Start 2P", cursive;
+  font-size: 45px;
+  touch-action: manipulation;
+}
+
+#game-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./img/pixel-sky.jpg");
+  background-size: cover;
+  border: 1px solid #fff;
+}
+
+#bird {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-image: url("./img/bird.png");
+  background-size: contain; /* Updated to contain instead of cover */
+}
+
+.pipe {
+  position: absolute;
+  width: 15vw;
+  background: linear-gradient(to right, #009b00, #006400);
+}
+
+#game-over {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
+#game-over button {
+  padding: 10px 20px;
+  font-size: 0.75em;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#game-over button:hover {
+  padding: 10px 20px;
+  font-size: 0.75em;
+  background-color: rgb(225, 225, 225);
+  border: none;
+  cursor: pointer;
+}
+
+#restart-button {
+  font-family: "Press Start 2P", cursive;
+}
+
+#home-screen {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+
+#home-screen button {
+  padding: 10px 20px;
+  font-size: 0.75em;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+}
+
+#home-screen button:hover {
+  padding: 10px 20px;
+  font-size: 0.75em;
+  background-color: rgb(225, 225, 225);
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  font-size: 15px;
+}
+
+ </style>
+</head>
+<body>
+  <div id="game-container">
+    <div id="home-screen">
+      <h1>Fly Bird</h1>
+      <p id="instructions">Tap the screen to fly!</p>
+      <button id="play-button">Play</button>
+    </div>
+    <div id="bird"></div>
+    <div id="pipe-top" class="pipe"></div>
+    <div id="pipe-bottom" class="pipe"></div>
+    <div id="game-over">
+      <h1>Game Over</h1>
+      <button id="restart-button">Restart</button>
+    </div>
+  </div>
+  <script src="flappyBird.js"></script>
+</body>
+</html>
