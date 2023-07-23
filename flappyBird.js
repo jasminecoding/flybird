@@ -87,8 +87,8 @@ bird.style.height = '100px';
 function adjustForMobile() {
   if (isMobile) {
     // Set bird size to a larger size for mobile
-    bird.style.width = '20vw';
-    bird.style.height = '20vw';
+    bird.style.width = '30vw';
+    bird.style.height = '30vw';
 
     // Adjust pipe size for mobile
     pipeTop.style.width = '20vw';
@@ -100,6 +100,7 @@ function adjustForMobile() {
     pipeHolePosition = Math.random() * (gameContainer.offsetHeight - 300) + 150;
   }
 }
+
 
 adjustForMobile();
 
