@@ -21,8 +21,9 @@ var highScore = localStorage.getItem('highScore') ? localStorage.getItem('highSc
 var gameOverMessage = document.getElementById('game-over');
 var restartButton = document.getElementById('restart-button');
 
-var jumpSpeed = -15;
-var fallSpeed = 1;
+var jumpSpeed = -16; // Decrease the jump speed for desktop
+var fallSpeed = 1.0; // Increase the fall speed for desktop
+
 
 var basePipeSpeed = 4;
 
@@ -87,18 +88,22 @@ bird.style.height = '100px';
 function adjustForMobile() {
   if (isMobile) {
     // Set bird size to a larger size for mobile
-    bird.style.width = '30vw';
-    bird.style.height = '30vw';
+    bird.style.width = '14vw';
+    bird.style.height = '14vw';
 
     // Adjust pipe size and gap for mobile
-    pipeTop.style.width = '50vw';
-    pipeBottom.style.width = '50vw';
-    pipeTop.style.height = '10vh'; // Adjust the height of pipeTop for mobile
-    pipeBottom.style.height = '10vh'; // Adjust the height of pipeBottom for mobile
+    pipeTop.style.width = '20vw';
+    pipeBottom.style.width = '20vw';
+    pipeTop.style.height = '3vh'; // Adjust the height of pipeTop for mobile
+    pipeBottom.style.height = '3vh'; // Adjust the height of pipeBottom for mobile
 
     // Increase the pipeHoleSize for mobile
     var pipeHoleSize = 150; // Set the desired pipe hole size for mobile
     pipeHolePosition = Math.random() * (gameContainer.offsetHeight - pipeHoleSize) + pipeHoleSize / 2;
+
+    // Adjust jumpSpeed and fallSpeed for mobile
+    jumpSpeed = -20; // Increase the jump speed for mobile
+    fallSpeed = 1.5; // Decrease the fall speed for mobile
   }
 }
 
