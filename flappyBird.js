@@ -51,7 +51,8 @@ var bgMusicPlayed = false;
 
 var instructions = document.getElementById('instructions');
 
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+var isMobile = window.navigator.maxTouchPoints > 0;
+
 
 var instructionElement = document.querySelector("#home-screen p");
 
