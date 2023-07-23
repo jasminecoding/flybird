@@ -90,16 +90,18 @@ function adjustForMobile() {
     bird.style.width = '30vw';
     bird.style.height = '30vw';
 
-    // Adjust pipe size for mobile
-    pipeTop.style.width = '40vw'; // Adjust the width of pipeTop for mobile
-    pipeBottom.style.width = '40vw'; // Adjust the width of pipeBottom for mobile
-    pipeTop.style.height = '20vh'; // Adjust the height of pipeTop for mobile
-    pipeBottom.style.height = '20vh'; // Adjust the height of pipeBottom for mobile
+    // Adjust pipe size and gap for mobile
+    pipeTop.style.width = '50vw';
+    pipeBottom.style.width = '50vw';
+    pipeTop.style.height = '10vh'; // Adjust the height of pipeTop for mobile
+    pipeBottom.style.height = '10vh'; // Adjust the height of pipeBottom for mobile
 
-    // Adjust pipeHolePosition for mobile
-    pipeHolePosition = Math.random() * (gameContainer.offsetHeight - 300) + 150;
+    // Increase the pipeHoleSize for mobile
+    var pipeHoleSize = 150; // Set the desired pipe hole size for mobile
+    pipeHolePosition = Math.random() * (gameContainer.offsetHeight - pipeHoleSize) + pipeHoleSize / 2;
   }
 }
+
 
 adjustForMobile();
 
