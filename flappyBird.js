@@ -86,15 +86,17 @@ bird.style.height = '100px';
 
 function adjustForMobile() {
   if (isMobile) {
-    // Set bird size to 150 pixels for mobile
-    bird.style.width = '100px';
-    bird.style.height = '100px';
+    // Set bird size to a larger size for mobile
+    bird.style.width = '20vw';
+    bird.style.height = '20vw';
 
-    // Adjust pipe size and gap for mobile
-    pipeTop.style.width = '40vw';
-    pipeBottom.style.width = '40vw';
-    pipeTop.style.height = '100px'; // Adjust the height of the pipeTop for mobile
-    pipeBottom.style.height = '100px'; // Adjust the height of the pipeBottom for mobile
+    // Adjust pipe size for mobile
+    pipeTop.style.width = '20vw';
+    pipeBottom.style.width = '20vw';
+    pipeTop.style.height = '30vh'; // Adjust the height of the pipeTop for mobile
+    pipeBottom.style.height = '30vh'; // Adjust the height of the pipeBottom for mobile
+
+    // Adjust pipeHolePosition for mobile
     pipeHolePosition = Math.random() * (gameContainer.offsetHeight - 300) + 150;
   }
 }
