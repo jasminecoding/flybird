@@ -12,12 +12,7 @@ var birdY = 250;
 var birdYSpeed = 0;
 var pipeX = gameContainer.offsetWidth;
 var pipeHoleSize = 250;  // The size of the gap between the top and bottom pipes.
-// Define minimum and maximum values for the hole position.
-var minHolePosition = 200;
-var maxHolePosition = gameContainer.offsetHeight - 200;
-
-pipeHolePosition = Math.random() * (maxHolePosition - minHolePosition) + minHolePosition;
-
+var pipeHolePosition = Math.random() * (gameContainer.offsetHeight - pipeHoleSize) + pipeHoleSize / 2;
 
 var gameOver = false;
 var score = 0;
@@ -56,7 +51,7 @@ var bgMusicPlayed = false;
 
 var instructions = document.getElementById('instructions');
 
-var isMobile = /Mobi|Android/i.test(navigator.userAgent);
+var isMobile = window.navigator.maxTouchPoints > 0 || /Mobi|Android/i.test(navigator.userAgent);
 
 
 
