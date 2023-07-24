@@ -94,8 +94,8 @@ function adjustForMobile() {
     // Adjust pipe size and gap for mobile
     pipeTop.style.width = '20vw';
     pipeBottom.style.width = '20vw';
-    pipeTop.style.height = '3vh'; // Adjust the height of pipeTop for mobile
-    pipeBottom.style.height = '3vh'; // Adjust the height of pipeBottom for mobile
+    pipeTop.style.height = '1vh'; // Adjust the height of pipeTop for mobile
+    pipeBottom.style.height = '1vh'; // Adjust the height of pipeBottom for mobile
 
     // Increase the pipeHoleSize for mobile
     var pipeHoleSize = 250; // Set the desired pipe hole size for mobile
