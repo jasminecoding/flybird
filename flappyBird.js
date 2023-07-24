@@ -98,7 +98,7 @@ function adjustForMobile() {
     pipeBottom.style.height = '3vh'; // Adjust the height of pipeBottom for mobile
 
     // Increase the pipeHoleSize for mobile
-    var pipeHoleSize = 150; // Set the desired pipe hole size for mobile
+    var pipeHoleSize = 250; // Set the desired pipe hole size for mobile
     pipeHolePosition = Math.random() * (gameContainer.offsetHeight - pipeHoleSize) + pipeHoleSize / 2;
 
     // Adjust jumpSpeed and fallSpeed for mobile
